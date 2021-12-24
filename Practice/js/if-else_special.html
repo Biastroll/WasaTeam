@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if_else 特殊運算</title>
+</head>
+<body>
+    <p>Date().getHours取得目前時間為幾點</p>
+    <button onclick="exFun()">GO!</button>
+    <p id="numHour"></p>
+    <p id="msg"></p>
+
+    <script>
+        function exFun(){
+            var timeHour = new Date().getHours();
+            var txtText = (timeHour > 11) ? "pm" : "am";
+            // c ? a : b;  -> c 判斷式; a 判斷為真時輸出; b 判斷為偽時輸出
+            document.getElementById("numHour").innerHTML = "Hours = " + timeHour;
+            document.getElementById("msg").innerHTML = "Now is " + txtText;
+        }
+    </script>
+</body>
+</html>

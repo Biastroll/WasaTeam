@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-overflow 超範圍文字</title>
+
+    <style>
+        p {
+            width: 150px;
+            border: 1px solid blue;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        #test1 {
+            text-overflow: clip;
+        }
+        #test2 {
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <p id="test1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nobis quo error nisi totam molestias delectus earum dicta eligendi quia culpa quisquam perferendis quas impedit natus qui blanditiis beatae id, vero cupiditate eos asperiores architecto. Deleniti non corporis reprehenderit optio eaque et assumenda quibusdam asperiores fugiat? Asperiores expedita reiciendis delectus!</p>
+    <p id="test2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nobis quo error nisi totam molestias delectus earum dicta eligendi quia culpa quisquam perferendis quas impedit natus qui blanditiis beatae id, vero cupiditate eos asperiores architecto. Deleniti non corporis reprehenderit optio eaque et assumenda quibusdam asperiores fugiat? Asperiores expedita reiciendis delectus!</p>
+</body>
+</html>

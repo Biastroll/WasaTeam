@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform-style</title>
+
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 3px;
+            padding: 20px;
+            background-color: aqua;
+
+            perspective: 800px;
+        }
+        .html {
+            padding: 50px;
+            position: absolute;
+            background-color: #a0f;
+            transform: rotateY(30deg) rotateX(30deg);
+
+            transform-style: preserve-3d;
+        }
+        .css {
+            padding: 50px;
+            position: absolute;
+            background-color: #fa0;
+            transform: rotateY(-30deg) rotateX(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="html">
+            HTML
+            <div class="css">CSS</div>
+        </div>
+    </div>
+</body>
+</html>

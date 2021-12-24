@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for迴圈 js 練習</title>
+</head>
+<body>
+    <script>
+        for(i=0;i<5;i++){ //回答5次
+            var numInput = window.prompt("輸入0-6", "");
+            switch (Number(numInput)) {
+                case 0 :
+                    window.alert("星期日");
+                    break;
+                case 1 :
+                    window.alert("星期一");
+                    break;
+                case 2 :
+                    window.alert("星期二");
+                    break;
+                case 3 :
+                    window.alert("星期三");
+                    break;
+                case 4 :
+                    window.alert("星期四");
+                    break;
+                case 5 :
+                    window.alert("星期五");
+                    break;
+                case 6 :
+                    window.alert("星期六");
+                    break;
+                default : 
+                    window.alert("錯誤");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing 猜數字</title>
+</head>
+<body>
+    <script>
+        var puzzle = getRandom(98), i, guessA = 0, guessB = 100;
+        var numInput = window.prompt("輸入 1-99 數字", "");
+        function getRandom(i){
+            return Math.floor(Math.random()*i)+1;
+        }
+        while( Number(numInput)!==puzzle ){
+            if( Number(numInput)>puzzle ){
+                do{
+                    if( Number(numInput)>puzzle ){
+                        guessB = Number(numInput);
+                        numInput = window.prompt( Number(guessA) + "-" + Number(guessB), "");
+                    }
+                    else if( Number(numInput)<puzzle ){
+                        guessA = Number(numInput);
+                        numInput = window.prompt( Number(guessA) + "-" + Number(guessB), "");
+                    }
+                    else{
+                        break;
+                    }
+                }while( Number(numInput)!==puzzle )
+            }
+            else if( Number(numInput)<puzzle ){
+                do{
+                    if( Number(numInput)>puzzle ){
+                        guessB = Number(numInput);
+                        numInput = window.prompt( Number(guessA) + "-" + Number(guessB), "");
+                    }
+                    else if( Number(numInput)<puzzle ){
+                        guessA = Number(numInput);
+                        numInput = window.prompt( Number(guessA) + "-" + Number(guessB), "");
+                    }
+                    else{
+                        break;
+                    }
+                }while( Number(numInput)!==puzzle )
+            }
+            else{
+                break;
+            }
+            window.alert("答對了!!!");
+        }
+    </script>
+</body>
+</html>

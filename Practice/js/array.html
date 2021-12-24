@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 陣列</title>
+</head>
+<body>
+    <p>JavaScript Array帶項目符號</p>
+    <p id="ex"></p>
+    <script>
+        var strList = ["Apple", "Orange", "Banana"];
+        var strLen = strList.length;
+        var ulText;
+        var i;
+        ulText= "<ul>";
+            for(i=0;i<strLen;i++){
+                ulText += "<li>" + strList[i] + "</li>";
+            }
+        ulText +=  "</ul>";
+        document.getElementById("ex").innerHTML = ulText;
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meter 儀表值</title>
+</head>
+<body>
+    <form action="">
+        <p>未指明 min, high和low:</p>
+        <meter value="75" max="100">75%</meter>
+        <p>有設定 min, high和low:</p>
+        <meter value="75" max="100" min="0" high="85" low="60">75%</meter>
+        <!-- 可先預先列出數值，以防不支援的瀏覽器無法顯示儀表條 -->
+    </form>
+</body>
+</html>

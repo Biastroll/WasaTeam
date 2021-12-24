@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for/in 迴圈</title>
+</head>
+<body>
+    <p id="ex"></p>
+    <script>
+        var numList = [8, 7, 9, 2, 5];
+        var numArray = "";
+        var i;
+        for(i in numList){
+            numArray += "numList[" + i + "] = " + numList[i] + "<br>";
+        }
+        document.getElementById("ex").innerHTML = numArray;
+    </script>
+</body>
+</html>

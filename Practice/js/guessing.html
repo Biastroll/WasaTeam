@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0-50 猜數字</title>
+</head>
+<body>
+    <script>
+        var puzzle=30;
+        var numInput = window.prompt(" 請輸入0-50之間的數字", "");
+        do{
+            if( Number(numInput)>puzzle ){
+                window.alert("小一點");
+                numInput = window.prompt(" 請輸入0-50之間的數字", "");
+            }
+            else if( Number(numInput)<puzzle ){
+                window.alert("大一點");
+                numInput = window.prompt(" 請輸入0-50之間的數字", "");
+            }else{
+                window.alert( "答對了!!!");
+                break;
+            }
+        } while( Number(numInput)!==puzzle )
+        window.alert( "答對了!!!");
+    </script>
+</body>
+</html>

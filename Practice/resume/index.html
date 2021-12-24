@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>履歷</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- navigation -->
+    <nav class="row">
+        <button class="nav_toggle">
+            <span class="nav_trigger">menu</span>
+        </button>
+        <ul class="list row">
+            <li class="item"><a href="#about_me"><h1>About Me</h1></a></li>
+            <li class="item"><a href="#experience"><h1>Education / <br> Work Experience</h1></a></li>
+            <li class="item"><a href="#portfolios"><h1>Learning<br>Portfolio</h1></a></li>
+            <li class="item"><a href="#skills"><h1>Skills</h1></a></li>
+        </ul>
+    </nav>
+    <!-- header -->
+    <header id="head">
+        <img src="https://picsum.photos/id/345/1200/800" alt="header-img">
+    </header>
+    <div class="container row">
+        <!-- main content -->
+        <main class="row">
+            <div class="about row col-12" id="about_me">
+                <div class="contact col-s col-12">
+                    <h2 class="contact_title">聯絡方式: </h2>
+                    <div class="contact_content">
+                        <div class="email">
+                            <i class="far fa-envelope"></i>
+                            <span>x12908@gmail.com</span>
+                        </div>
+                        <div class="mobile">
+                            <i class="fas fa-mobile-alt"></i>
+                            <!-- <span>Mobile: </span> -->
+                            <span>0928-467-370</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="objective col-s col-12">
+                    <h2 class="obj_title">期望應徵職位: </h2>
+                    <div class="job">網頁前端工程師</div>
+                </div>
+                <div class="intro row col-12">
+                    <div class="intro_content">嗨，我是 林育賢，中原大學電機系畢業，具備HTML5、CSS3及JavaScript 網頁語言基本知識，透過 書籍 (《最完整跨平台網頁設計 : HTML + CSS + JavaScript + jQuery + Bootstrap + Google Maps 王者歸來》) 及網路(w3school、Youtube)自學，也在聯成電腦補習進修相關及UI課程。</div>
+                </div>
+            </div>
+            <div class="exp" id="experience">
+                <div class="education row col-12">
+                    <h2 class="edu_title">學歷</h2>
+                    <div class="edu_content">中原大學 電機工程學系 畢業 (2013.9 - 2017.6)</div>
+                </div>
+                <div class="work row col-12">
+                    <h2 class="work_title">工作經歷</h2>
+                    <div class="content_title">文件掃描人員  臺北市政府商業處檔案室 (2018.8 - 2021.12)</div>
+                    <div class="content_text">紙本公文掃描、上傳轉為電子檔，仔細檢視匯出之電子檔，確認具有足夠的閱讀方便性，包含圖檔清晰度、內容完整度及方向正確。</div>
+                    <div class="content_text">協助同事處理系統環境狀況及電腦狀況。</div>
+                </div>
+            </div>
+            <div class="portfolio row col-12" id="portfolios">
+                <h2 class="works_title">練習作品</h2>
+            <!-- RWD -->
+                <h3>RWD - HTML + CSS</h3>
+                <!-- layout -->
+                <div class="row">
+                    <div class="box col-l-6 col-12">
+                        <a href="RWD_prac/rwd_practice-1/index.html" target="_blank">
+                            <img src="imgs/RWD-1.png">
+                        </a>
+                    </div>
+                    <div class="box col-l-6 col-12">
+                        <a href="RWD_prac/rwd_practice-2/index.html" target="_blank">
+                            <img src="imgs/RWD-2.png">
+                        </a>
+                    </div>
+                        <div class="item_name col-12">RWD-Layout</div>
+                </div>
+                <!-- fluid -->
+                <div class="row">
+                    <div class="col-12">
+                        <img src="imgs/RWD-fluid_layout-L.png">
+                    </div>
+                    <div class="box col">
+                        <img src="imgs/RWD-fluid_layout-M.png">
+                    </div>
+                    <div class="box col">
+                        <img src="imgs/RWD-fluid_layout-S.png">
+                    </div>
+                    <div class="item_name col-12">RWD-流動式版面</div>
+                </div>
+                <!-- ham -->
+                <div>
+                    <img src="imgs/RWD-ham_menu.png" class="col-12">
+                    <div class="item_name col-12">RWD-漢堡選單</div>
+                </div>
+            <!-- JS -->
+                <h3>JavaScript</h3>
+                <div class="JS row">
+                    <div class="box col-l-6 col-s-6 col-12">
+                        <a href="JS/guessnumber.html" target="_blank">
+                            <img src="imgs/guessing.png" class="guess_img">
+                        </a>
+                        <div class="item_name col-12">JavaScript-終極密碼(猜數字)</div>
+                    </div>
+                    <div class="box col-l-6 col-s-6 col-12">
+                        <a href="JS/NoteApp/index.html" target="_blank">
+                            <img src="imgs/NoteApp.png" class="note_img">
+                        </a>
+                        <div class="item_name col-12">JavaScript-備忘錄</div>
+                    </div>
+                </div>
+            <!-- UI -->
+                <h3>UI design</h3>
+                <!-- form -->
+                <div class="row">
+                    <div class="box col-l-6 col-s-12 col-12">
+                        <img src="imgs/UIUX-form.png">
+                    </div>
+                    <div class="box col-l-6 col-s-12 col-12">
+                        <img src="imgs/UIUX-form-colors_component.png">
+                    </div>
+                    <div class="item_name col-12">UI-表單練習(PC & Mobile)</div>
+                </div>
+                <!-- App -->
+                <div class="row">
+                    <div class="box col-l-6 col-s-12 col-12">
+                        <img src="imgs/UIUX-Spotlife.png">
+                    </div>
+                    <div class="box col-l-6 col-s-12 col-12">
+                            <img src="imgs/UIUX-Spotlife-colors_component.png">
+                    </div>
+                    <div class="item_name col-12">UI-Spotlife(App)</div>
+                </div>
+                <!-- drinks -->
+                <div>
+                    <img src="imgs/UIUX-drinks.png" class="col-12">
+                    <div class="item_name col-12">UI-熊愛喝飲料</div>
+                </div>
+            </div>
+            <div class="skill row col-12" id="skills">
+                <h2 class="skill_title">證照</h2>
+                <div class="aca row col">
+                    <span><img src="imgs/ACA_AI.jpg" alt="ACA_AI證照">ACA_Illustrator</span>
+                </div>
+                <div class="aca row col">
+                    <span><img src="imgs/ACA_PS.jpg" alt="ACA_PS證照">ACA_Photoshop</span>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- to the top 按鈕 -->
+    <div class="top">
+        <a href="#head">TOP</a>
+    </div>
+    <!-- footer -->
+    <footer> Copyright &copy; 2021 Bias. All Rights Reserve. </footer>
+    
+    <script src="nav.js"></script>
+</body>
+</html>

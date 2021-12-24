@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing 猜數字</title>
+</head>
+<body>
+    <script>
+        var puzzle = getRandom(98), i, guessA, guessB;
+        var numInput = window.prompt("輸入 1-99 數字", "");
+        // window.prompt("輸入 1-99 數字", "");
+        do{
+            numInput;
+            if( Number(numInput)>puzzle ){
+                if( Number(numInput)>puzzle ){
+                    window.alert( guessA + " 到 " + guessB );
+                    numInput = window.prompt("輸入 " + "1-" + Number(numInput) + " 數字", "");
+                    guessB = Number(numInput);
+                }
+                else{
+                    window.alert( guessB + " 到 " + Number(numInput) );
+                    numInput = window.prompt("輸入 " + "1-" + Number(numInput) + " 數字", "");
+                    guessB = Number(numInput);                    
+                }
+
+                window.alert( "0到 " + Number(numInput) );
+                numInput = window.prompt("輸入 " + "0-" + Number(numInput) + " 數字", "");
+            }
+            else {
+                window.alert(  Number(numInput) + "到 100" );
+                numInput = window.prompt("輸入 " + Number(numInput) + "-99 數字", "");
+            }
+        } while( Number(numInput)!==puzzle)
+        function getRandom(i){
+            return Math.floor(Math.random()*i)+1;
+        }
+        window.alert("答對了!!!");
+    </script>
+</body>
+</html>
