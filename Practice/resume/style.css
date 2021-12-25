@@ -66,6 +66,8 @@ nav {
     align-items: center;
     transform: translateY(-150%);
     transition: .5s;
+    position: absolute;
+    z-index: 1;
 }
 @media (min-width: 720px) {
     .list {        
