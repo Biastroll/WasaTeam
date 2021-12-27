@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computed / watch</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="movie in formateMovie">{{ movie }}</li>
+        </ul>
+        <button v-on:click="addMovie">加入電影</button>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                movies: [{
+                    name: "捉妖記",
+                    year: 2018
+                },{
+                    name: "星際大戰8",
+                    year: 2018
+                },{
+                    name: "唐人街探案2",
+                    year: 2018
+                }]
+            },
+            methods: {
+                addMovie : function(){
+                    this.movies.push({
+                        name: "妖貓傳",
+                        year: 2017
+                    })
+                }
+            },
+            watch: {
+                movies : function(newValue){
+                    alert("加入 " + newValue[newValue.length-1].name);
+                }
+            },
+            computed: {
+                formateMovie : function(){
+                    return this.movies.map(function(movie){
+                        return movie.name + " (" + movie.year + ")"
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-if / v-for</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script> -->
+    <!-- <script type="module">
+        import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
+    </script> -->
+    <!-- <script src="vue.js"></script> -->
+</head>
+<body>
+    <div id="app">
+        <!-- v-if -->
+        <input type="password" v-model="password">
+        <p v-if="password.length > 8">輸入大於8個字元</p>
+        <p v-else-if="password.length > 0">輸入 {{ password.length }} 個字元</p>
+        <p v-else>沒有輸入字元</p>
+
+        <!-- v-for -->
+        <ol>
+            <li v-for="subData in subs">{{ subData.name }}
+                <ul>
+                    <li v-for = "item in subData.sub">{{ item }}</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data : {
+                password: "",
+                subs: [{
+                    name: 'javascript',
+                    sub: ['Vue', 'React', 'Angular']
+                    },{
+                    name: 'database',
+                    sub: ['jQuery', 'mySql', 'sqlServer']
+                    },{
+                    name: 'system',
+                    sub: ['macOS', 'Linux', 'Windows']
+                }]
+            }
+        })
+    </script>
+</body>
+</html>
