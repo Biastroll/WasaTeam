@@ -10,7 +10,6 @@ body {
 }
 h2 {
     font-size: 1.8rem;
-    /* font-weight: bolder; */
 }
 a {
     text-decoration: none;
@@ -28,33 +27,115 @@ a {
     grid-auto-rows: auto;
 }
 /* nav */
-nav {
+.nav {
     display: grid;
-    grid-template-areas: ". . navItem navItem navItem navItem . .";
+    grid-template-areas: 
+        ". trigger ."
+        /* "navItem navItem navItem"
+        "navItem navItem navItem"
+        "navItem navItem navItem"
+        "navItem navItem navItem" */
+        ;
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     background-color: #dddddde0;
-    /* position: sticky; */
+    position: sticky;
+    top: 0;
     z-index: 999;
+}
+.nav.active {
+    grid-template-areas: 
+        ". trigger ."
+        "navItem navItem navItem"
+        "navItem navItem navItem"
+        "navItem navItem navItem"
+        "navItem navItem navItem";
+}
+@media (min-width: 720px) {
+    .nav {
+        display: grid;
+        grid-template-areas: ". . navItem navItem navItem navItem trigger .";
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        background-color: #dddddde0;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+    .nav.active {
+        grid-template-areas: ". . navItem navItem navItem navItem trigger .";
+    }
+}
+.nav_toggle {
+    grid-area: trigger;
+    width: 32px;
+    aspect-ratio: 1;
+    background-image: url("imgs/ham.png");
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    justify-self: center;
+    cursor: pointer;
+    margin-block: 5px;
+}
+@media (min-width: 720px) {
+    .nav_toggle {
+        grid-area: trigger;
+        width: 32px;
+        aspect-ratio: 1;
+        background-image: none;
+        border: none;
+        background-color: transparent;
+        justify-self: center;
+        cursor: initial;
+        margin-block: 5px;
+    }    
 }
 .list {
     display: grid;
     grid-area: navItem;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     column-gap: 0.5rem;
     text-align: center;
+    background-color: #666;
+    height: 0;
+    grid-column: 1 / -1;
+}
+@media (min-width: 720px) {
+    .list {
+        display: grid;
+        grid-area: navItem;
+        grid-auto-flow: column;
+        column-gap: 0.5rem;
+        text-align: center;
+        background-color: transparent;
+        height: initial;
+    }    
+}
+.list.active {
+        height: initial;
 }
 .list > .item {
     align-self: center;
     line-height: 1.5rem;
     margin-block: .8rem;
 }
-.item > a {
-    color: #666;
-    transition: .5s;
+.nav_item {
+    color: transparent;
+    /* transition: .5s; */
 }
-.item > a:hover {
-    font-size: 1.2em;
+@media (min-width: 720px) {
+    .nav_item {
+        color: #666;
+        transition: .5s;
+    }
+    .nav_item:hover {
+        font-size: 1.2em;
+    }    
+}
+.nav_item.active {
+    color: #eee;
+    /* transition: .5s; */
 }
 /* nav_over */
 /* header */
@@ -81,7 +162,7 @@ main {
         ". skill skill skill skill ."
         ;
     margin: 1.8rem 0;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 /* about */
 .about {
@@ -92,6 +173,7 @@ main {
         "contact contact objective objective"
         "intro intro intro intro";
     margin-block: 1.2rem;
+    padding-top: 5rem;
 }
 .about > div {
     text-align: center;
@@ -122,7 +204,7 @@ main {
     grid-area: exp;
     text-align: center;
     margin-block: .8rem;
-    padding-block: 1.5rem;    
+    padding-block: 2rem;    
 }
 .education, .work {
     margin-block: 3rem;
@@ -151,7 +233,6 @@ main {
 .portfolio {
     display: grid;
     grid-area: port;
-    grid-column: repeat( 4 / 1fr );
     grid-template-areas: 
         ". title title ."
         ". work_1 work_1 ."
@@ -162,6 +243,7 @@ main {
         ". work_3 work_3 ."
         "item_content_3 item_content_3 item_content_3 item_content_3"
         ;
+    padding-block: 3rem;
 }
 .works_title {
     grid-area: title;
