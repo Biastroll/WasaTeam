@@ -190,6 +190,9 @@ header img {
 i {
     padding-right: 10px;
 }
+.git > img {
+    width: 5em;
+}
 /* intro */
 .intro {
     box-sizing: border-box;
