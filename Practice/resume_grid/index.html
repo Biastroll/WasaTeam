@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="style.css">
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <!-- <script src="vue.js"></script> -->
 </head>
 <body>
     <div class="container">
         <!-- navigation -->
         <nav class="nav">
-            <button class="nav_toggle"></button>
-            <div class="list">
+            <button class="nav_toggle" v-if="toggleOn" v-on:click="changeState"></button>
+            <div class="list" v-if="turnOn" v-on:click="changeState">
                 <div class="item"><a class="nav_item" href="#about_me"><h1>About Me</h1></a></div>
                 <div class="item"><a class="nav_item" href="#experience"><h1>Education / <br> Work Experience</h1></a></div>
                 <div class="item"><a class="nav_item" href="#portfolios"><h1>Learning<br>Portfolio</h1></a></div>
@@ -76,8 +79,9 @@
                             </a>
                         </div>
                         <div class="box_item">
-                            <a href="RWD_prac/rwd_practice-2/index.html" target="_blank"></a>
+                            <a href="RWD_prac/rwd_practice-2/index.html" target="_blank">
                             <img src="imgs/RWD-2.png">
+                        </a>
                         </div>
                         <div class="item_name">RWD-Layout</div>
                     </div>

@@ -29,13 +29,7 @@ a {
 /* nav */
 .nav {
     display: grid;
-    grid-template-areas: 
-        ". trigger ."
-        /* "navItem navItem navItem"
-        "navItem navItem navItem"
-        "navItem navItem navItem"
-        "navItem navItem navItem" */
-        ;
+    grid-template-areas: ". trigger .";
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     background-color: #dddddde0;
@@ -43,26 +37,8 @@ a {
     top: 0;
     z-index: 999;
 }
-.nav.active {
-    grid-template-areas: 
-        ". trigger ."
-        "navItem navItem navItem"
-        "navItem navItem navItem"
-        "navItem navItem navItem"
-        "navItem navItem navItem";
-}
 @media (min-width: 720px) {
     .nav {
-        display: grid;
-        grid-template-areas: ". . navItem navItem navItem navItem trigger .";
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
-        background-color: #dddddde0;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
-    .nav.active {
         grid-template-areas: ". . navItem navItem navItem navItem trigger .";
     }
 }
@@ -80,15 +56,9 @@ a {
 }
 @media (min-width: 720px) {
     .nav_toggle {
-        grid-area: trigger;
-        width: 32px;
-        aspect-ratio: 1;
-        background-image: none;
-        border: none;
-        background-color: transparent;
-        justify-self: center;
+        grid-column: 4 / -4;
+        align-self: center;
         cursor: initial;
-        margin-block: 5px;
     }    
 }
 .list {
@@ -98,44 +68,35 @@ a {
     column-gap: 0.5rem;
     text-align: center;
     background-color: #666;
-    height: 0;
     grid-column: 1 / -1;
 }
 @media (min-width: 720px) {
     .list {
-        display: grid;
         grid-area: navItem;
         grid-auto-flow: column;
-        column-gap: 0.5rem;
-        text-align: center;
         background-color: transparent;
         height: initial;
     }    
-}
-.list.active {
-        height: initial;
 }
 .list > .item {
     align-self: center;
     line-height: 1.5rem;
     margin-block: .8rem;
 }
-.nav_item {
-    color: transparent;
-    /* transition: .5s; */
+.nav_item:visited {
+    color: #eee;
 }
 @media (min-width: 720px) {
     .nav_item {
         color: #666;
         transition: .5s;
     }
+    .nav_item:visited {
+        color: #666;
+    }
     .nav_item:hover {
         font-size: 1.2em;
     }    
-}
-.nav_item.active {
-    color: #eee;
-    /* transition: .5s; */
 }
 /* nav_over */
 /* header */
@@ -170,10 +131,18 @@ main {
     grid-auto-flow: column;
     grid-area: about;
     grid-template-areas: 
-        "contact contact objective objective"
-        "intro intro intro intro";
+        "contact contact"
+        "objective objective"
+        "intro intro";
     margin-block: 1.2rem;
     padding-top: 5rem;
+}
+@media (min-width: 860px) {
+    .about {
+        grid-template-areas: 
+            "contact contact objective objective"
+            "intro intro intro intro";
+    }
 }
 .about > div {
     text-align: center;
