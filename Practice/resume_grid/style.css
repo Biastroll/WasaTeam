@@ -248,6 +248,14 @@ main {
     grid-column: 2 / -2;
     text-align: center;
 }
+.item_name > a {
+    color: #007aec;
+    font-weight: bold;
+}
+.item_name > a:visited {
+    color: #007aec;
+    font-weight: bold;
+}
 .item_l {
     grid-column: span 4;
 }
