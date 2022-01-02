@@ -15,10 +15,10 @@
             <input v-model="newTodo" @keyup.enter="createTodo">
         </div>
         <ul id="todo-list">
-            <li v-for="todo in todos" :data-id="todo.id" :class="{ complete: todo.complete }">
+            <li v-for="(todo, index) in todos" :data-id="todo.id" :class="{ complete: todo.complete }">
                 <input type="checkbox" v-model="todo.complete">
                 <div class="content">{{ todo.content }}</div>
-                <button>x</button>
+                <button @click="deleteTodo(todo, index)">x</button>
             </li>
         </ul>
     </div>

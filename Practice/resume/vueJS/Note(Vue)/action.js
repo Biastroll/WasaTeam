@@ -29,9 +29,16 @@ const vm = Vue.createApp({
                 complete: false,
             };
 
+            // this.todos.unshift(newTodo);
             this.todos.push(newTodo);
 
             this.newTodo = '';
+        },
+        deleteTodo(todo,index){
+            let result = confirm(`Delete todo: "${ todo.content }" ?`)
+            if(result){
+                this.todos.splice(index, 1)
+            }
         },
     }
 }).mount('#app');
