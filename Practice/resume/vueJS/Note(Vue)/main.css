@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+
+#app {
+    width: 80vw;
+    margin: auto;
+}
+.center {
+    margin-block: 10px;
+    text-align: center;
+}
+
+#todo-list {
+    margin-top: 50px;
+    padding: 0;
+}
+#todo-list > li {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border-top: 1px solid #000;
+    padding-block: 5px;
+}
+button {
+    margin-left: auto;
+}
+.complete > .content {
+    text-decoration: line-through;
+}
