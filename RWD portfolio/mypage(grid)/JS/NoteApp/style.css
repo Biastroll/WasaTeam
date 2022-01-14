@@ -1,0 +1,56 @@
+.app {
+    width: 60vw;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    /* text-align: center; */
+}
+
+input {
+    box-sizing: border-box;
+    width: 70%;
+    min-width: inherit;
+    height: 30px;
+    border: 1px solid #111;
+    border-radius: 10px;
+    padding-inline: 5px;
+}
+
+/* button */
+.add {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #5c95ff;
+    color: #ddd;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+.remove {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #ff4e4e;
+    color: #ddd;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+/* content list */
+.list {
+    padding: 20px;
+}
+.item {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}

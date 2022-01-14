@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>備忘錄</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="vue.js"></script>
+
+</head>
+<body>
+    <div class="app">
+        <h1>備忘錄</h1>
+        <p>記事</p>
+        <input type="text" v-model="noteText">
+        <p>日期</p>
+        <input type="date" v-model="noteDate">
+        <p>時間</p>
+        <input type="time" v-model="noteTime">
+        <button class="add" v-on:click="addNote">新增記事</button>
+        <button class="remove" v-on:click="removeNote">刪除最近一筆</button>
+
+        <!-- <div class="list"> -->
+            {{ noteText }}
+        <!-- </div> -->
+
+        <!-- <div class="list" id="list"> -->
+            <!-- <div class="item">
+                <div>
+                    <p>內容: </p>
+                    <p>時間: </p>
+                </div>
+            </div> -->
+        <!-- </div> -->
+    </div>
+    
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
