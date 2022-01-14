@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>履歷_grid</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <!-- <script src="vue.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <!-- navigation -->
+        <nav class="nav">
+            <button class="nav_toggle" v-if="toggleOn" v-on:click="changeState"></button>
+            <div class="list" v-if="turnOn" v-on:click="changeState">
+                <div class="item"><a class="nav_item" href="#about_me"><h1>About Me</h1></a></div>
+                <div class="item"><a class="nav_item" href="#experience"><h1>Education / <br> Work Experience</h1></a></div>
+                <div class="item"><a class="nav_item" href="#portfolios"><h1>Learning<br>Portfolio</h1></a></div>
+                <div class="item"><a class="nav_item" href="#skills"><h1>Skills</h1></a></div>
+            </div>
+        </nav>
+        <!-- header -->
+        <header id="head">
+            <img src="https://picsum.photos/id/345/1200/800" alt="header-img">
+        </header>
+        <!-- main content -->
+        <main>
+            <div class="about" id="about_me">
+                <div class="contact">
+                    <h2 class="contact_title">聯絡方式: </h2>
+                    <div class="contact_content">
+                        <div class="email">
+                            <i class="far fa-envelope"></i><br>
+                            <span>x12908@gmail.com</span>
+                        </div>
+                        <div class="mobile">
+                            <i class="fas fa-mobile-alt"></i><br>
+                            <span>0928-467-370</span>
+                        </div>
+                        <div class="git">
+                            <i class="fab fa-github"></i><br>
+                            <img src="imgs/git_QRcode.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="objective">
+                    <h2 class="obj_title">期望應徵職位: </h2>
+                    <div class="job">網頁前端工程師</div>
+                </div>
+                <div class="intro">
+                    <div class="intro_content">嗨，我是 林育賢，中原大學電機系畢業，具備HTML5、CSS3及JavaScript 網頁語言基本知識<br><small>透過 書籍 (《最完整跨平台網頁設計 : HTML + CSS + JavaScript + jQuery + Bootstrap + Google Maps 王者歸來》) 及網路(w3school、Youtube)自學，也在聯成電腦補習持續進修相關知識及UI課程。</small></div>
+                </div>
+            </div>
+            <div class="exp" id="experience">
+                <div class="education">
+                    <h2 class="edu_title">學歷</h2>
+                    <div class="edu_content">中原大學 電機工程學系 畢業 (2013.9 - 2017.6)</div>
+                </div>
+                <div class="work">
+                    <h2 class="work_title">工作經歷</h2>
+                    <div class="content_title">文件掃描人員  臺北市政府商業處檔案室 (2018.8 - 2021.12)</div>
+                    <div class="content_text">紙本公文掃描、上傳轉為電子檔，仔細檢視匯出之電子檔，確認具有足夠的閱讀方便性，包含圖檔清晰度、內容完整度及方向正確。</div>
+                    <div class="content_text">協助同事處理系統環境狀況及電腦狀況。</div>
+                </div>
+            </div>
+            <div class="portfolio" id="portfolios">
+                <h2 class="works_title">練習作品</h2>
+            <!-- RWD -->
+                <h3 class="title_rwd">RWD - HTML + CSS</h3>
+                <div class="item_rwd">
+                    <!-- layout -->
+                    <div class="box">
+                        <div class="box_item">
+                            <a href="RWD_prac/rwd_practice-1/index.html" target="_blank">
+                                <img src="imgs/RWD-1.png">
+                            </a>
+                        </div>
+                        <div class="box_item">
+                            <a href="RWD_prac/rwd_practice-2/index.html" target="_blank">
+                            <img src="imgs/RWD-2.png">
+                        </a>
+                        </div>
+                        <div class="item_name">RWD-Layout</div>
+                    </div>
+                    <!-- fluid -->
+                    <div class="box">
+                        <div class="box_item item_l">
+                            <img src="imgs/RWD-fluid_layout-L.png">
+                        </div>
+                        <div class="box_item">
+                            <img src="imgs/RWD-fluid_layout-M.png">
+                        </div>
+                        <div class="box_item">
+                            <img src="imgs/RWD-fluid_layout-S.png">
+                        </div>
+                        <div class="item_name">RWD-流動式版面</div>
+                    </div>
+                    <!-- ham -->
+                    <div class="box">
+                        <div class="box_item item_l">
+                            <img src="imgs/RWD-ham_menu.png">
+                        </div>
+                        <div class="item_name">RWD-漢堡選單</div>
+                    </div>
+                </div>
+            <!-- JS -->
+                <h3 class="title_js">JavaScript</h3>
+                <div class="JS item_js">
+                    <div class="box">
+                        <div class="box_item">
+                            <a href="JS/guessnumber.html" target="_blank">
+                                <img src="imgs/guessing.png" class="guess_img">
+                            </a>
+                            <div class="item_name">JavaScript-終極密碼(猜數字)</div>
+                        </div>
+                        <div class="box_item">
+                            <a href="JS/NoteApp/index.html" target="_blank">
+                                <img src="imgs/NoteApp.png" class="note_img">
+                            </a>
+                            <div class="item_name">JavaScript-備忘錄</div>
+                        </div>
+                    </div>
+                </div>
+            <!-- UI -->
+                <h3 class="title_ui">UI design</h3>
+                <div class="item_ui">
+                <!-- form -->
+                    <div class="box">
+                        <img src="imgs/UIUX-form.png" class="box_item">
+                        <img src="imgs/UIUX-form-colors_component.png" class="box_item">
+                        <div class="item_name">
+                            UI-表單練習(<a href="https://xd.adobe.com/view/6c80628c-7ad5-4ae9-98bf-bdc95d8b1070-39d3/?fullscreen" target="_blank">PC</a> & <a href="https://xd.adobe.com/view/bc5468b9-3b92-4bcd-a4d8-50f2ae5e789e-e907/?fullscreen" target="_blank">Mobile</a>)
+                        </div>
+                    </div>
+                <!-- App -->
+                    <div class="box">
+                        <img src="imgs/UIUX-Spotlife.png" class="box_item">
+                        <img src="imgs/UIUX-Spotlife-colors_component.png" class="box_item">
+                        <div class="item_name">
+                            UI-Spotlife(<a href="https://xd.adobe.com/view/86021d0c-c612-487e-a2de-7e57174d782f-d351/?fullscreen" target="_blank">App</a>)
+                        </div>
+                    </div>
+                <!-- drinks -->
+                    <div class="box">
+                        <img src="imgs/UIUX-drinks.png" class="box_item item_l">
+                        <div class="item_name">
+                            UI-熊愛喝飲料(<a href="https://xd.adobe.com/view/a2916aef-71f4-4a82-8662-8ed98dadb73e-f7c2/?fullscreen" target="_blank">PC</a> & <a href="https://xd.adobe.com/view/17748988-d6f3-4c96-87fe-ea82d64d1870-4227/?fullscreen" target="_blank">Mobile</a>)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill" id="skills">
+                <h2 class="skill_title">證照</h2>
+                <div class="aca">
+                    <img class="aca_img" src="imgs/ACA_AI.jpg" alt="ACA_AI證照">
+                    <div>ACA_Illustrator</div>
+                </div>
+                <div class="aca">
+                    <img class="aca_img" src="imgs/ACA_PS.jpg" alt="ACA_PS證照">
+                    <div>ACA_Photoshop</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- to the top 按鈕 -->
+    <div class="top">
+        <a href="#head">TOP</a>
+    </div>
+    <!-- footer -->
+    <footer> Copyright &copy; 2021 Bias. All Rights Reserve. </footer>
+    
+    <script src="nav.js"></script>
+</body>
+</html>
