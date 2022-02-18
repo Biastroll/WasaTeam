@@ -9,10 +9,7 @@
             <input type="radio" id="select" name="input" value="select" v-model="inputType">
             <label for="select">Select</label>
         </div>
-        <!-- <div>{{ inputType }}</div> -->
         <change-type :item="inputType"></change-type>
-
-        <!-- <div class="input-container"></div> -->
     </div>
 </template>
 

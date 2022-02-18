@@ -9,21 +9,24 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-        title: 'Online test'}
+        title: 'Online test',
+        description: 'The index page of the online test.'}
   },
   {
     path: '/inputType',
     name: 'InputType',
     component: InputType,
     meta: {
-        title: 'Change the input'}
+        title: 'Change the input',
+        description: 'You can change the type of input and the page will show you what you do with the input.'}
   },
   {
     path: '/api',
     name: 'Api',
     component: Api,
     meta: {
-        title: 'Api(json)'}
+        title: 'Api(json)',
+        description: 'Click the drop-down menu to get the json. Then, choose the name to get the information.'}
   }
 ]
 
@@ -36,6 +39,15 @@ router.beforeEach((to, from) => {
   if (to.meta.title) {
       document.title = to.meta.title
   }
+})
+router.beforeEach((to) => {
+  console.log(to.meta);
+  let head = document.getElementsByTagName('head');
+  let meta = document.createElement('meta');
+
+  document.querySelector('meta[name="description"]').setAttribute('content',to.meta.description)
+  meta.content = to.meta.content;
+  head[0].appendChild(meta);
 })
 
 export default router
