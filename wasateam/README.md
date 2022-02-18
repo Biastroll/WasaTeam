@@ -1,24 +1,12 @@
-# wasateam
-
-## Project setup
+# 山葵組 線上測試
+## 不會的/未完成項目
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+設定Global參數，讓頁面的顏色、主題會隨著更換
 ```
 
-### Compiles and minifies for production
+## 說明
 ```
-npm run build
+1.使用Vue Cli
+2.點選下拉式選單進行串接api，再透過選單內的選項，選擇要顯示的api資料內容
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://wasateam-test-68de8.firebaseapp.com/
